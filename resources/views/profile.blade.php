@@ -20,11 +20,15 @@
             </ul>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
             <form>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre..." required>
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"><i class="far fa-edit"></i></span>
+                    </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Asunto</label>
