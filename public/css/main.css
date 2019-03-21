@@ -12,6 +12,9 @@ h5 { font-size: 18px; }
 h6 { font-size: 16px; }
 
 /* Propiedades generales */
+.cursor-p {
+	cursor: pointer;
+}
 .container-classic {
     margin: 40px auto;
 }
@@ -24,6 +27,9 @@ div.card {
 }
 .comfortaa {
     font-family: 'Comfortaa', cursive !important;
+}
+.dropdown-menu > li {
+	cursor: pointer;
 }
 
 /* NavBar */
@@ -236,10 +242,86 @@ footer {
 }
 
 /* Perfil & Panel de Control */
+.profile-pic {
+	height: 200px;
+	border-radius: 50%;
+}
 .menuItem {
-
+	transition: 0.2s all;
 }
 .menuItem:hover {
-	background: #eee;
 	cursor: pointer;
+	background: #eee !important;
 }
+.menuItem:active {
+	background: #ddd !important;
+}
+
+/* Logout Modal*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+  }
+  .modalContent {
+	text-align: center;
+	background-color: #fefefe;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0px 15px 10px 15px;
+	margin: 15% auto;
+	border: 1px solid #888;
+	width: 40%;
+  }
+	/* The Close Button */
+  .close {
+	height: 40px;
+	width: 100%;
+	display: block;
+  }
+  .closeButton {
+	float: right;
+	font-size: 36px;
+	font-weight: bold;
+	color: #aaa;
+	text-align: center;
+	transition: 0.3s;
+	cursor: pointer;
+  }
+  .closeButton:hover, .closeButton:focus {
+	color: black;
+	text-decoration: none;
+  } 
+	/* Modal text */
+  .textModal {
+	margin-top: 25px; 
+	display: block;
+  }
+  .textModal p {
+	font-size: 20px;
+  }
+	/* Confirmation Buttons */
+  .logoutButtons{
+	display: block;
+	margin: 40px 0px 10px 0px;
+  }
+  .logoutButtons button {
+	padding: 10px;
+	width: 100px;
+	border: 1px solid #c9c9c9;
+	border-radius: 3px;
+	margin: 0px 25px;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  .logoutButtons button:hover{
+	background: #ccc;
+  }
+  

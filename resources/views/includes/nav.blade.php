@@ -28,14 +28,29 @@
 					<li><a href="/" class="dropdown-item"><i class="fa fa-star"></i> Créditos: 2</a></li>
 					<li><a href="/" class="dropdown-item"><i class="fas fa-sliders-h"></i> Configuración</a></li>
 					<li class="divider dropdown-divider"></li>
-					<li><a href="/" class="dropdown-item"><i class="fas fa-power-off"></i> Cerrar Sesión</a></li>
+					<li onclick="showLogout()"><a class="dropdown-item"><i class="fas fa-power-off"></i> Cerrar Sesión</a></li>
 				</ul>
 			</li>
 		</ul>
     </div>    
 </nav>
-        
-<!-- Nav no fixed -->
+		
+<div class="modal" id="modal">
+    <div class="modalContent">
+    	<div class="close">
+        	<span class="closeButton" onclick="hideLogout()">&times;</span>
+        </div>
+        <span class="textModal">
+        	<p>Estás seguro que deseas cerrar sesión?</p>
+        <span>
+        <div class="logoutButtons">
+        	<button onclick="hideLogout()">No</button>  
+        	<a href="/"><button>Si</button></a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav no fixed (No se ve, es para evitar cosas "debajo" de la barra de navegación) (MODIFICAR MAS ADELANTE CON UN SLIDER) -->
 <nav class="navbar navbar-inverse navbar-expand-xl navbar-dark">
 	<div class="navbar-header d-flex col">
 		<a class="navbar-brand" href="/"><i class="fa fa-location-arrow"></i>Home<b>Switch</b>Home</a>  		

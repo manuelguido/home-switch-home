@@ -1,26 +1,43 @@
-//Switch de panel y perfil
+//Función es para cambiar información personal en el perfil/panel
+function saveInfo() {
+    var x = document.getElementById("saveInfo");
+    var y = 'Cancelar <i class="fas fa-times"></i>'
+    var z = 'Editar Información <i class="far fa-edit"></i>'
+    var inputs = document.getElementsByClassName('personal-input');
+    
+    if (document.getElementById("editInfo").innerHTML == y) {
+        x.style.display = "none";
+        document.getElementById("editInfo").innerHTML = z;
+        for(var i = 0; i < inputs.length; i++) {
+            inputs[i].disabled = true;
+        }
+    } else {
+        x.style.display = "inline";
+        document.getElementById("editInfo").innerHTML = y;
+        for(var i = 0; i < inputs.length; i++) {
+            inputs[i].disabled = false;
+        }
+    }
+}
+    
+//Funcion de Switch del perfil/panel
 function menuSwitch(n) {
-    var subItems = document.getElementsByClassName('subItem');  
+    var subItems = document.getElementsByClassName('subItem');
     var menuItems = document.getElementsByClassName('menuItem');
+    var profileTitle = document.getElementById('profile-title');
+    
     for(var i = 0; i < subItems.length; i++) {
         subItems[i].style.display = 'none';
-        menuItems[i].style.background = '';
-        menuItems[i].style.color = '#fff';
+        menuItems[i].style.background = '#fff';
+        menuItems[i].style.color = '#121212';
     }
+    profileTitle.innerHTML = menuItems[n].innerHTML;
     subItems[n].style.display = 'block';
-    menuItems[n].style.background = '#66ff66';
+    menuItems[n].style.background = '#ddd';
     menuItems[n].style.color = '#000';
 }
-function toggleSidebar() {
-    var sidebar = document.getElementById('sidebar');
-    if (sidebar.style.display === 'none') {
-        sidebar.style.display = 'block';
-    }
-    else
-    {
-        sidebar.style.display = 'none';
-    }
-}
+
+//Modal de cerrar sesión
 function showLogout() {
     document.getElementById("modal").style.display = 'block';
 }

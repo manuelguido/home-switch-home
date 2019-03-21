@@ -4,9 +4,12 @@
 
 @section('content')
 
-<div class="container card simple-div" onload="menuSwitch(0)">
+<!-- Se declara esto solo para cargar el js de panel -->
+<body onload="menuSwitch(0)">
 
-    <h1><i class="far fa-user-circle"></i> Datos de Perfil</h1>
+<div class="container card simple-div">
+
+    <h1 id="profile-title"></h1>
     <hr>
 
     <div class="row">
@@ -16,34 +19,41 @@
                 <li class="list-group-item menuItem" onclick="menuSwitch(0)"><i class="far fa-address-card"></i> Información Personal</li>
                 <li class="list-group-item menuItem" onclick="menuSwitch(1)"><i class="fa fa-star"></i> Comprar Créditos</li>
                 <li class="list-group-item menuItem" onclick="menuSwitch(2)"><i class="far fa-credit-card"></i> Medios de pago</li>
-                <li class="list-group-item menuItem" onclick="menuSwitch(3)"><i class="fas fa-power-off"></i> Cerrar Sesión</li>
+                <li class="list-group-item menuItem" onclick="menuSwitch(3)"><i class="fas fa-lock"></i> Cambiar Contraseña</li>
+                <li class="list-group-item menuItem" onclick="showLogout()"><i class="fas fa-power-off"></i> Cerrar Sesión</li>
             </ul>
             </div>
         </div>
-        <div class="col-md-6">
-            <form>
-                <div class="form-group">
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2"><i class="far fa-edit"></i></span>
-                    </div>
-                    </div>
+        <!-- Inicio de containers cambiables -->
+        <div class="container-fluid col-md-8 subItem">
+            <div class="row">
+                <div class="col-md-4 text center">
+                    <img src="{{ asset('img/img-pruebas/perfil.jpg') }}" class="avatar profile-pic" alt="Avatar">
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-outline-secondary">Cambiar Imagen <i class="fas fa-images"></i></button>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Asunto</label>
-                    <input type="text" class="form-control" placeholder="Asunto..." required>
+                <div class="col-md-8">
+                    <form>
+                        <div class="form-group">
+                            <label>Nombre:</label>
+                            <input type="text" class="form-control personal-input" disabled="true" value="Tú Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido:</label>
+                            <input type="text" class="form-control personal-input" disabled="true" value="Tú Apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control personal-input" disabled="true" value="tuemail@gmail.com" required>
+                        </div>
+                        <div class="form-group text-center">
+                            <a class="btn btn-outline-secondary cursor-p" id="editInfo" onclick="saveInfo()">Editar Información <i class="far fa-edit"></i></a>
+                            <button type="submit" class="btn btn-info" id="saveInfo" style="display: none;">Guardar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-info float-right">Enviar</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
