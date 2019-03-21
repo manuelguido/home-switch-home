@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container card contact-div">
+<div class="container card simple-div">
 
     <h1><i class="fa fa-envelope"></i>&nbsp;Contácto</h1>
     <hr>

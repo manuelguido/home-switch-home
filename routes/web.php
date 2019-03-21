@@ -22,3 +22,7 @@ Route::get('/faq', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/profile', function () { //Acomodar enviando parametros del usuario
+    return view('profile');
+});

@@ -1,7 +1,8 @@
 /* Main Document */
 body{
     background: #eeeeee;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
+	color: #121212;
 }
 h1 { font-size: 26px; }
 h2 { font-size: 24px; }
@@ -16,6 +17,10 @@ h6 { font-size: 16px; }
 }
 div.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 10px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.simple-div {
+    margin: 40px auto;
+    padding: 60px 60px;
 }
 .comfortaa {
     font-family: 'Comfortaa', cursive !important;
@@ -46,7 +51,7 @@ div.card {
 	color: #fafafa;
 	padding-left: 0;
 	padding-right: 50px;
-	font-size: 24px;		
+	font-size: 24px;	
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
 	color: #fff;
@@ -76,12 +81,12 @@ div.card {
     position: absolute;
     right: 0;
     z-index: 9;
-    padding: 10px 7px;
+    padding: 7px 7px;
 	height: 100%;
 }
 .search-box i {
     color: #a0a5b1;
-	font-size: 19px;
+	font-size: 17px;
 }
 .navbar .nav-item i {
 	font-size: 22px;
@@ -200,10 +205,6 @@ footer {
 }
 
 /* contact Page */
-.contact-div {
-    margin: 40px auto;
-    padding: 60px 60px;
-}
 
 /* Home Page */
 .filtros .list-group-item {
@@ -232,4 +233,13 @@ footer {
     background: green;
     border-radius: 5px;
     padding: 10px 12px;
+}
+
+/* Perfil & Panel de Control */
+.menuItem {
+
+}
+.menuItem:hover {
+	background: #eee;
+	cursor: pointer;
 }

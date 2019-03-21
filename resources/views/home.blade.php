@@ -31,12 +31,12 @@
                     <hr>
                     <div class="range-slider">
                         <input class="range-slider__range" type="range" value="100" min="0" max="100000" step="100">
-                        Desde: $<span class="range-slider__value">0</span>
+                        <br>Desde: $<span class="range-slider__value">0</span>
                     </div>
                     <br>
                     <div class="range-slider">
                         <input class="range-slider__range" type="range" value="10000" min="0" max="100000" step="100">
-                        Hasta: $<span class="range-slider__value">0</span>
+                        <br>Hasta: $<span class="range-slider__value">0</span>
                     </div>
                 </li>
                 <li class="list-group-item">
