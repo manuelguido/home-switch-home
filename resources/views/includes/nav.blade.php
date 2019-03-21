@@ -38,7 +38,7 @@
 <div class="modal" id="modal">
     <div class="modalContent">
     	<div class="close">
-        	<span class="closeButton" onclick="hideLogout()">&times;</span>
+        	<span class="closeButton" onclick="hideLogout()"><i class="fas fa-times"></i></span>
         </div>
         <span class="textModal">
         	<p>Estás seguro que deseas cerrar sesión?</p>

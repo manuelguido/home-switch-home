@@ -1,5 +1,6 @@
 /* Main Document */
 body{
+	min-height: 100%;
     background: #eeeeee;
     font-family: 'Lato', sans-serif;
 	color: #121212;
@@ -10,6 +11,7 @@ h3 { font-size: 22px; }
 h4 { font-size: 20px; }
 h5 { font-size: 18px; }
 h6 { font-size: 16px; }
+
 
 /* Propiedades generales */
 .cursor-p {
@@ -208,6 +210,8 @@ div.card {
 footer {
     padding: 0 160px;
     background: #fff;
+	bottom: 0;
+	width: 100%;
 }
 
 /* contact Page */
@@ -241,7 +245,11 @@ footer {
     padding: 10px 12px;
 }
 
+
 /* Perfil & Panel de Control */
+.profile-div {
+	min-height: 44em;
+}
 .profile-pic {
 	height: 200px;
 	border-radius: 50%;
@@ -257,7 +265,8 @@ footer {
 	background: #ddd !important;
 }
 
-/* Logout Modal*/
+
+/* Logout Modal (Ventana de cierre de sesión) */
 .modal {
 	display: none;
 	position: fixed;
@@ -275,24 +284,23 @@ footer {
 	background-color: #fefefe;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	padding: 0px 15px 10px 15px;
+	padding: 10px 15px;
 	margin: 15% auto;
 	border: 1px solid #888;
 	width: 40%;
   }
 	/* The Close Button */
   .close {
-	height: 40px;
+	height: 36px;
 	width: 100%;
 	display: block;
   }
   .closeButton {
 	float: right;
-	font-size: 36px;
-	font-weight: bold;
+	font-size: 26px;
 	color: #aaa;
 	text-align: center;
-	transition: 0.3s;
+	transition: 0.2s all;
 	cursor: pointer;
   }
   .closeButton:hover, .closeButton:focus {
