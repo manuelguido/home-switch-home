@@ -43,32 +43,34 @@
             </div>
             <ul class="filtros list-group list-group-flush">
                 <li class="list-group-item">
-                    <i class="fa fa-map-marker-alt"></i> Ubicación
+                    <p><i class="fa fa-map-marker-alt"></i> Ubicación</p>
                     <input type="text" class="form-control" placeholder="Ciudad, Provincia...">
                 </li>
                 <li class="list-group-item">    
-                        <i class="fas fa-book-open"></i> Tipo
+                    <p><i class="fas fa-book-open"></i> Tipo</p>
                     <select class="form-control" id="sel1">
                         <option>Subasta</option>
                         <option>Alquiler (Premium)</option>
                     </select> 
                 </li>
                 <li class="list-group-item">
-                    <i class="fas fa-hand-holding-usd"></i> Precio
-                    <hr>
-                    <div class="range-slider">
-                        <input class="range-slider__range" type="range" value="100" min="0" max="100000" step="100">
-                        <br>Desde: $<span class="range-slider__value">0</span>
-                    </div>
-                    <br>
-                    <div class="range-slider">
-                        <input class="range-slider__range" type="range" value="10000" min="0" max="100000" step="100">
-                        <br>Hasta: $<span class="range-slider__value">0</span>
-                    </div>
+                    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                    <link rel="stylesheet" href="/resources/demos/style.css">
+                    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+                    <p><i class="fas fa-hand-holding-usd"></i> Precio
+                        <hr>
+                        <input type="text" id="amount" readonly style="border:0;">
+                    </p>
+                    <div id="slider-range"></div>
+
+            </li>
                 </li>
                 <li class="list-group-item">
                     <button type="submit" class="btn btn-success float-right">Aplicar</button>
                 </li>
+
             </ul>
             </div>
 
@@ -141,42 +143,5 @@
     </div>
 
 </div>
-
-<!-- Script de filtro de precios -->
-<script>
-        var rangeSlider = function(){
-          var slider = $('.range-slider'),
-              range = $('.range-slider__range'),
-              value = $('.range-slider__value');
-            
-          slider.each(function(){
-        
-            value.each(function(){
-              var value = $(this).prev().attr('value');
-              $(this).html(value);
-            });
-        
-            range.on('input', function(){
-              $(this).next(value).html(this.value);
-            });
-          });
-        };
-        
-        rangeSlider();
-</script>
-<script type="text/javascript">
-        
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-36251023-1']);
-          _gaq.push(['_setDomainName', 'jqueryscript.net']);
-          _gaq.push(['_trackPageview']);
-        
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        
-</script>
 
 @endsection

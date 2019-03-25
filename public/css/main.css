@@ -1,10 +1,13 @@
 /* Main Document */
-body{
+body {
 	min-height: 100%;
   background: #eee;
   font-family: 'Lato', sans-serif;
-	color: #121212;
+	color: #333;
 	transition: 0.2s all;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #333 !important;
 }
 h1 { font-size: 26px; }
 h2 { font-size: 24px; }
@@ -33,6 +36,9 @@ div.card {
 }
 .dropdown-menu > li {
 	cursor: pointer;
+}
+.color-blue {
+	color: #4286f4 !important;
 }
 
 /* NavBar */
@@ -207,23 +213,18 @@ div.card {
 	}
 }
 
-/* Footer */
-footer {
-    padding: 0 160px;
-    background: #fff;
-	bottom: 0;
-	width: 100%;
-}
-
 /* contact Page */
 
-/* Home Page */
+/* Search Page */
 .filtros .list-group-item {
     font-size: 14px;
 }
 .filtros select, .filtros input[type=text] {
     padding: 0px 5px;
     font-size: 14px;
+}
+.ubicacion-card {
+	font-size: 12px;
 }
 .checked { /* Color de estrellas de valoracion */
     color: #ff9900;
@@ -233,17 +234,27 @@ footer {
     opacity: 0.8;
 }
 .card-img {
-    height: 100%;
+		min-height: 100%;
+}
+.square {
+	height: 170px;
+	width: 170px;
+	overflow: hidden;
 }
 .second-info {
     font-size: 12px;
 }
+.propiedad-card {
+	color: #333;
+}
 .card-price {
-    font-size: 14px;
-    color: #fff;
-    background: green;
-    border-radius: 5px;
-    padding: 10px 12px;
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 12px;
 }
 
 
@@ -275,7 +286,10 @@ footer {
 	text-decoration: none;
 	color: #131313;
 }
-
+.medio-de-pago-card-outer {
+	padding: 5px !important;
+	margin: 0px;
+}
 
 /* Logout Modal (Ventana de cierre de sesión) */
 .modal {
@@ -342,5 +356,4 @@ footer {
   }
   .logoutButtons button:hover{
 	background: #ccc;
-  }
-  
+	}

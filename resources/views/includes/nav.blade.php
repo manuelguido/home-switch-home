@@ -11,11 +11,13 @@
 	</div>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
-		<form class="navbar-form form-inline">
+		
+		<!-- Quitar el enlace, solo de prueba-->
+		<a href="/search"><form class="navbar-form form-inline">
 			<div class="input-group search-box">								
 				<input type="text" id="search" class="form-control" placeholder="Buscar...">
 				<span class="input-group-addon"><i class="fas fa-search"></i></span>
-			</div>
+			</div></a>
 		</form>
 		<ul class="nav navbar-nav navbar-right ml-auto">
             <li class="nav-item active"><a href="/" class="nav-link"><i class="fa fa-home"></i><span></span></a></li>

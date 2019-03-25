@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/search', function () {
+    return view('search');
+});
+
 Route::get('/faq', function () {
     return view('faq');
 });
@@ -25,4 +29,12 @@ Route::get('/contact', function () {
 
 Route::get('/profile', function () { //Acomodar enviando parametros del usuario
     return view('profile');
+});
+
+Route::get('/booking', function () { //Acomodar enviando parametros del usuario
+    return view('booking');
+});
+
+Route::get('/notifications', function () { //Acomodar enviando parametros del usuario
+    return view('notifications');
 });
