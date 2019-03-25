@@ -31,20 +31,7 @@
                         <label class="custom-control-label cursor-p" for="subastaSwitch">Subasta</label>
                     </div>
                 </li>
-                <li class="list-group-item">
-                    <p><i class="fas fa-hand-holding-usd"></i> Precio
-                        <hr>
-                        <input type="text" id="amount" readonly style="border:0;">
-                    </p>
-                    <div id="slider-range"></div>
-                </li>
-                <li class="list-group-item">    
-                    <p><i class="fas fa-sort"></i> Ordenar por:</p>
-                    <select class="form-control" id="sel1">
-                        <option>Menor a mayor</option>
-                        <option>Mayor a menor</option>
-                    </select> 
-                </li>
+
             </ul>
             </div>
 
@@ -67,7 +54,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-6">
                                         <h2>Propiedad {{ $i }}</h2>
                                         <p class="ubicacion-card color-blue"><i class="fa fa-map-marker-alt"></i> Mar del Plata, Argentina</p>
                                         <p>Disponibilidad <br>
@@ -86,13 +73,10 @@
                                             <i class="fa fa-bath"></i> Baños: 2<br>
                                             <i class="fa fa-user"></i> Capacidad: 6<br>
                                         </div>
-                                        
-                                            <p class="btn btn-success card-price float-right">$ 1999</p>
-                                        
                                     </div>
-                                </div>
-                                <div class="row">
-
+                                    <div class="col-md-2">
+                                        <p class="btn btn-success card-price float-right">$ 1999</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
