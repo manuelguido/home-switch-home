@@ -1,9 +1,10 @@
 /* Main Document */
 body{
 	min-height: 100%;
-    background: #eeeeee;
-    font-family: 'Lato', sans-serif;
+  background: #eee;
+  font-family: 'Lato', sans-serif;
 	color: #121212;
+	transition: 0.2s all;
 }
 h1 { font-size: 26px; }
 h2 { font-size: 24px; }
@@ -263,6 +264,16 @@ footer {
 }
 .menuItem:active {
 	background: #ddd !important;
+}
+.medio-de-pago-card {
+	opacity: 0.6;
+	text-decoration: none;
+	color: #131313;
+}
+.medio-de-pago-card:hover {
+	opacity: 1;
+	text-decoration: none;
+	color: #131313;
 }
 
 

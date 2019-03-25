@@ -1,3 +1,20 @@
+//Funcion de Switch del perfil/panel
+function menuSwitch(n) {
+    var subItems = document.getElementsByClassName('subItem');
+    var menuItems = document.getElementsByClassName('menuItem');
+    var profileTitle = document.getElementById('profile-title');
+    
+    for(var i = 0; i < subItems.length; i++) {
+        subItems[i].style.display = 'none';
+        menuItems[i].style.background = '#fff';
+        menuItems[i].style.color = '#121212';
+    }
+    profileTitle.innerHTML = menuItems[n].innerHTML;
+    subItems[n].style.display = 'block';
+    menuItems[n].style.background = '#ddd';
+    menuItems[n].style.color = '#000';
+}
+
 //Función es para cambiar información personal en el perfil/panel
 function saveInfo() {
     var x = document.getElementById("saveInfo");
@@ -19,23 +36,18 @@ function saveInfo() {
         }
     }
 }
-    
-//Funcion de Switch del perfil/panel
-function menuSwitch(n) {
-    var subItems = document.getElementsByClassName('subItem');
-    var menuItems = document.getElementsByClassName('menuItem');
-    var profileTitle = document.getElementById('profile-title');
-    
-    for(var i = 0; i < subItems.length; i++) {
-        subItems[i].style.display = 'none';
-        menuItems[i].style.background = '#fff';
-        menuItems[i].style.color = '#121212';
-    }
-    profileTitle.innerHTML = menuItems[n].innerHTML;
-    subItems[n].style.display = 'block';
-    menuItems[n].style.background = '#ddd';
-    menuItems[n].style.color = '#000';
-}
+
+//Funcion desaparecer/aparecer opciones
+$(document).ready(function(){
+    $("#showCreditForm").click(function(){
+        $("#debitForm").hide();
+        $("#creditForm").show();
+    });
+    $("#showDebitForm").click(function(){
+        $("#creditForm").hide();
+        $("#debitForm").show();
+    });
+});
 
 //Modal de cerrar sesión
 function showLogout() {

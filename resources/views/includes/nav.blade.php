@@ -19,14 +19,13 @@
 		</form>
 		<ul class="nav navbar-nav navbar-right ml-auto">
             <li class="nav-item active"><a href="/" class="nav-link"><i class="fa fa-home"></i><span></span></a></li>
-            <li class="nav-item"><a href="/" class="nav-link"><i class="fa fa-book"></i><span></span></a></li>		
-			<li class="nav-item"><a href="/" class="nav-link"><i class="fa fa-bell"></i><span></span></a></li>
+            <li class="nav-item"><a href="/booking" class="nav-link"><i class="fa fa-book"></i><span></span></a></li>		
+			<li class="nav-item"><a href="/notifications" class="nav-link"><i class="fa fa-bell"></i><span></span></a></li>
 			<li class="nav-item dropdown">
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="{{ asset('img/img-pruebas/perfil.jpg') }}" class="avatar" alt="Avatar"> Manuel <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="/profile" class="dropdown-item"><i class="far fa-user-circle"></i> Perfil</a></li>
-					<li><a href="/" class="dropdown-item"><i class="fa fa-star"></i> Créditos: 2</a></li>
-					<li><a href="/" class="dropdown-item"><i class="fas fa-sliders-h"></i> Configuración</a></li>
+					<li><a class="dropdown-item"><i class="fa fa-star"></i> Créditos: 2</a></li>
+					<li><a href="/profile" class="dropdown-item"><i class="fas fa-sliders-h"></i> Configuración</a></li>
 					<li class="divider dropdown-divider"></li>
 					<li onclick="showLogout()"><a class="dropdown-item"><i class="fas fa-power-off"></i> Cerrar Sesión</a></li>
 				</ul>
