@@ -1,7 +1,7 @@
 /* Main Document */
 body {
 	min-height: 100%;
-  background: #eee;
+  background: rgb(235, 235, 235);;
   font-family: 'Lato', sans-serif;
 	color: #333;
 	transition: 0.2s all;
@@ -16,6 +16,9 @@ h4 { font-size: 20px; }
 h5 { font-size: 18px; }
 h6 { font-size: 16px; }
 
+#app {
+	padding-top: 58px !important;
+}
 
 /* Propiedades generales */
 .cursor-p {
@@ -50,9 +53,9 @@ div.card {
 }	
 .navbar {
 	color: #fff;
-	background: #ff8c74;
-	padding: 5px 60px;
-	border-radius: 0;
+	background: lightskyblue;
+	padding: 4px 180px;
+	border-radius: 0 !important;
 	border: none;
 	box-shadow: 0 0 4px rgba(0,0,0,.1);
 }
@@ -72,39 +75,41 @@ div.card {
 	color: #fff;
 }
 .navbar .navbar-brand i {
-	font-size: 25px;
-	margin-right: 5px;
+	font-size: 22px;
+	margin-right: 6px;
 }
 .search-box {
-    position: relative;
+	position: relative;
 }	
 .search-box input {
-    padding-right: 35px;
+	padding-right: 35px;
 	min-height: 38px;
-	border: none;
-	background: #faf7fd;
-    border-radius: 3px !important;
+	color: #131313;
+
+	border: 1px solid #f9f9f9;
+	background: #fff;
+	border-radius: 3px !important;
 }
 .search-box input:focus {		
 	background: #fff;
 	box-shadow: none;
 }
 .search-box .input-group-addon {
-    min-width: 35px;
-    border: none;
-    background: transparent;
-    position: absolute;
-    right: 0;
-    z-index: 9;
-    padding: 7px 7px;
+	min-width: 35px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	padding: 7px;
 	height: 100%;
 }
 .search-box i {
-    color: #a0a5b1;
-	font-size: 17px;
+	color: #a0a5b1;
+	font-size: 16px;
 }
 .navbar .nav-item i {
-	font-size: 22px;
+font-size: 22px;
 }
 .navbar .nav-item span {
 	position: relative;
@@ -116,66 +121,66 @@ div.card {
 	font-size: 16px;		
 }
 .navbar .nav > li a:hover, .navbar .nav > li a:focus {
-	color: #fff;
-	text-shadow: 0 0 4px rgba(255,255,255,0.3);
+color: #fff;
+text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 .navbar .nav > li > a > i {
-	display: block;
-	text-align: center;
+display: block;
+text-align: center;
 }
 .navbar .dropdown-item i {
-	font-size: 16px;
-	min-width: 22px;
+font-size: 16px;
+min-width: 22px;
 }
 .navbar .dropdown-item .material-icons {
-    font-size: 21px;
-    line-height: 16px;
-    vertical-align: middle;
-    margin-top: -2px;
+	font-size: 21px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-top: -2px;
 }
 .navbar .nav-item.open > a, .navbar .nav-item.open > a:hover, .navbar .nav-item.open > a:focus {
-	color: #fff;
-	background: none !important;
+color: #fff;
+background: none !important;
 }
 .navbar .dropdown-menu {
-	border-radius: 1px;
-	border-color: #e5e5e5;
-	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+border-radius: 1px;
+border-color: #e5e5e5;
+box-shadow: 0 2px 8px rgba(0,0,0,.05);
 }
 .navbar .dropdown-menu li a {
-	color: #777 !important;
-	padding: 8px 20px;
-	line-height: normal;
+color: #777 !important;
+padding: 8px 20px;
+line-height: normal;
 }
 .navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:focus {
-	color: #333 !important;
-	background: transparent !important;
+color: #333 !important;
+background: transparent !important;
 }
 .navbar .nav .active a, .navbar .nav .active a:hover, .navbar .nav .active a:focus {
-	color: #fff;
-	text-shadow: 0 0 4px rgba(255,255,255,0.2);
-	background: transparent !important;
+color: #fff;
+text-shadow: 0 0 4px rgba(255,255,255,0.2);
+background: transparent !important;
 }
 .navbar .nav .user-action {
-	padding: 9px 15px;
+padding: 9px 15px;
 }
 .navbar .navbar-toggle {
-	border-color: #fff;
+border-color: #fff;
 }
 .navbar .navbar-toggle .icon-bar {
-	background: #fff;
+background: #fff;
 }
 .navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
-	background: transparent;
+background: transparent;
 }
 .navbar .navbar-nav .open .dropdown-menu {
-	background: #faf7fd;
-	border-radius: 1px;
-	border-color: #faf7fd;
-	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+background: #faf7fd;
+border-radius: 1px;
+border-color: #faf7fd;
+box-shadow: 0 2px 8px rgba(0,0,0,.05);
 }
 .navbar .divider {
-	background-color: #e9ecef !important;
+background-color: #e9ecef !important;
 }
 @media (min-width: 1200px){
 	.form-inline .input-group {
@@ -184,6 +189,9 @@ div.card {
 	}
 }
 @media (max-width: 1199px){
+	.navbar {	
+		padding: 2px 60px;
+	}
 	.navbar .nav > li > a > i {
 		display: inline-block;			
 		text-align: left;
@@ -213,6 +221,28 @@ div.card {
 	}
 }
 
+/* Footer */
+footer {
+	margin: 120px 0 0 0 !important;
+	background: #fff;
+	box-shadow: #333;
+}
+.footer-top {
+	padding: 60px 0;
+}
+.footer-logo {
+	width: 240px;
+}
+.footer-copyright {
+	padding: 20px;
+	border-top: 1px #eee solid !important;
+	background: white !important;
+	color: #333 !important;
+}
+.footer-copyright > a {
+	color: #4286f4 !important;
+}
+
 /* Home Page */
 .home-card {
 	padding: 10px !important;
@@ -220,6 +250,9 @@ div.card {
 /* contact Page */
 
 /* Search Page */
+.filter-card {
+	position: sticky !important;
+}
 .filtros .list-group-item {
     font-size: 14px;
 }
@@ -227,6 +260,7 @@ div.card {
     padding: 0px 5px;
     font-size: 14px;
 }
+
 .ubicacion-card {
 	font-size: 12px;
 }
@@ -234,22 +268,15 @@ div.card {
     color: #ff9900;
 }
 .list-group > a:hover {
-    text-decoration: none;
-    opacity: 0.8;
-}
-.card-img {
-		min-height: 100%;
-}
-.square {
-	height: 170px;
-	width: 170px;
-	overflow: hidden;
-}
-.second-info {
-    font-size: 12px;
+  text-decoration: none;
+	opacity: 0.7;
 }
 .propiedad-card {
 	color: #333;
+	height: 190px !important;
+}
+.propiedad-card .row {
+	height: 100% !important;
 }
 .card-price {
 	position: absolute;
@@ -259,6 +286,38 @@ div.card {
   color: #fff;
   border-radius: 5px;
   padding: 10px 12px;
+}
+.card-promo {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.object-fit_cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img-cover {
+  height: 100%;
+  background-color: #444;
+}
+.img-cover[class] {
+  width: 100%;
+}
+.image {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+  margin: 0;
+}
+.second-info {
+		font-size: 12px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
 }
 
 

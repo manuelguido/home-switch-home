@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/mdb.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}"/>
-    <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.svg') }}"/>
 
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="{{ asset('fonts/fontawesome/css/all.css') }}"/>
@@ -30,6 +30,11 @@
     <script src="{{ asset('js/jquery-ui.js') }}"></script>
     <script src="{{ asset('js/mdb.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <title>@yield('title')</title>
     

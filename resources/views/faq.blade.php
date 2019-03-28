@@ -19,7 +19,7 @@
     </div>
     <hr>
     <div class="row">
-        <div class="col-md-12 float-left">
+        <div class="col-md-12 text-center">
         <br>
         <h2>No encuentras lo que buscas?</h2><br>
         <a href="/contact" class="btn btn-info">Contáctanos</a>

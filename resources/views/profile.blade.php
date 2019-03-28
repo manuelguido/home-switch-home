@@ -18,9 +18,10 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item menuItem" onclick="menuSwitch(0)"><i class="far fa-address-card"></i> Información Personal</li>
                 <li class="list-group-item menuItem" onclick="menuSwitch(1)"><i class="fa fa-star"></i> Mis Créditos</li>
-                <li class="list-group-item menuItem" onclick="menuSwitch(2)"><i class="fas fa-file-signature"></i> Historial de cobro</li>
-                <li class="list-group-item menuItem" onclick="menuSwitch(3)"><i class="far fa-credit-card"></i> Medios de pago</li>
-                <li class="list-group-item menuItem" onclick="menuSwitch(4)"><i class="fas fa-lock"></i> Cambiar Contraseña</li>
+                <li class="list-group-item menuItem" onclick="menuSwitch(2)"><i class="fas fa-award"></i> Suscripción premium</li>
+                <li class="list-group-item menuItem" onclick="menuSwitch(3)"><i class="fas fa-file-signature"></i> Historial de cobro</li>
+                <li class="list-group-item menuItem" onclick="menuSwitch(4)"><i class="far fa-credit-card"></i> Medios de pago</li>
+                <li class="list-group-item menuItem" onclick="menuSwitch(5)"><i class="fas fa-lock"></i> Cambiar Contraseña</li>
                 <li class="list-group-item menuItem" onclick="showLogout()"><i class="fas fa-power-off"></i> Cerrar Sesión</li>
             </ul>
             </div>
@@ -31,7 +32,7 @@
         <!-- Informacion Personal -->
         <div class="container-fluid col-md-8 subItem">
             <div class="row">                
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <form>
                         <div class="form-group">
                             <label>Nombre:</label>
@@ -47,20 +48,19 @@
                         </div>
                         <br>
                         <div class="form-group text-center">
-                            <span class="btn btn-outline-secondary cursor-p" id="editInfo" onclick="saveInfo()">Editar Información <i class="far fa-edit"></i></span>
-                            <button type="submit" class="btn btn-success" id="saveInfo" style="display: none;">Guardar</button>
+                            <span type="button" class="btn btn-outline-default waves-effect" id="editInfo" onclick="saveInfo()">Editar Información <i class="far fa-edit"></i></span>
+                            <button type="submit" class="btn btn-outline-success waves-effect" id="saveInfo" style="display: none;">Guardar</button>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-5 text-center">
                     <img src="{{ asset('img/img-pruebas/perfil.jpg') }}" class="avatar profile-pic" alt="Avatar">
                     <br>
                     <br>
                     <form>
-                        <div class="form-group btn btn-outline-secondary cursor-p" style="padding: 4px 10px 0 10px;">
-                            <label for="cambiarImagen" class="cursor-p">Cambiar imagen <i class="fas fa-images"></i></label>
-                            <input type="file" class="form-control-file" id="cambiarImagen" style="display: none; ">
-                        </div>
+                        <label class="btn btn-outline-default waves-effect btn-file">
+                                <i class="fas fa-images"></i> Cambiar Imagen<input type="file" style="display: none;">
+                        </label>
                     </form>
                 </div>
             </div>
@@ -77,31 +77,47 @@
             </div>
         </div>
 
+        <!-- Suscripción Premium -->
+        <div class="container-fluid col-md-8 subItem">
+            <h2>Estado: usuario gratuito</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Los usuarios gratuitos sólo pueden acceder a subastas dentro del sitio.</h4>
+                    <h4>Si te conviertes en usuario premium tendras acceso a alquileres exclusivos.</h4>
+                    <p>Para convertirte en usuario premium solo tienes que hacercarte a nuestras oficinas, el costo mensual es de $000 por mes. </p>
+                </div>
+
+            </div>
+        </div>
+
         <!-- Historial de cobro -->
         <div class="container-fluid col-md-8 subItem">
                     
             <ul class="fluid list-group">
                                         
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            Fecha<br>13/04/2018
-                        </div>
-                        <div class="col-md-9">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h6>Alquier</h6>
-                                    <p>-$190</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p><i class="fab fa-cc-mastercard"></i> Mastercard</p>
-                                    <p>**** **** **** 5544</p>
+                @for ($i = 0; $i < 8; $i++)
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                Fecha<br>13/04/2018
+                            </div>
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h6>Alquier {{ $i + 1 }}</h6>
+                                        <p>- ${{ rand(100,4000) }}</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p><i class="fab fa-cc-mastercard"></i> Mastercard</p>
+                                        <p>**** **** **** {{ rand(1000,9999) }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>                            
-      
+                    </li>                            
+                @endfor
+
             </ul>
 
         </div>
@@ -134,14 +150,6 @@
                                 <div class="card-body">
                                     <p><i class="fab fa-cc-amex"></i> American</p>
                                     <p>**** **** **** 3433</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 medio-de-pago-card-outer">
-                            <a  href="/" class="col-md-12 card medio-de-pago-card">
-                                <div class="card-body">
-                                    <p><i class="fas fa-money-check-alt"></i> Débito</p>
-                                    <p>CBU: ***********021 </p>
                                 </div>
                             </a>
                         </div>
@@ -265,7 +273,7 @@
                         </div>
                         <br>
                         <div class="form-group text-center">
-                            <button class="btn btn-outline-secondary cursor-p" id="editInfo" onclick="saveInfo()">Cambiar contraseña <i class="fas fa-key"></i></button>
+                            <button class="btn btn-outline-default waves-effect" id="editInfo" onclick="saveInfo()">Cambiar contraseña <i class="fas fa-key"></i></button>
                         </div>
                     </form>
                 </div>
