@@ -30,6 +30,7 @@
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item"><i class="fa fa-star"></i> Créditos: 2</a></li>
 					<li><a href="/profile" class="dropdown-item"><i class="fas fa-sliders-h"></i> Configuración</a></li>
+					<li><a href="/admin" class="dropdown-item"><i class="fas fa-tachometer-alt"></i> Administrador</a></li>
 					<li class="divider dropdown-divider"></li>
 					<li onclick="showLogout()"><a class="dropdown-item"><i class="fas fa-power-off"></i> Cerrar Sesión</a></li>
 				</ul>

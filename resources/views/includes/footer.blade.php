@@ -8,7 +8,7 @@
       <div class="row">
 
         <!-- Grid column -->
-        <div class="col-md-4 text-center">
+        <div class="col-md-6">
 
             <!-- Content -->
             <h2 class="navbar-brand comfortaa"><img class="footer-logo" src="{{ asset('img/logo.png') }}"></h2>
@@ -18,27 +18,14 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-4 text-center">
-
-        </div>
-
-        <!-- Grid column -->
-        <div class="col-md-4 text-center">
+        <div class="col-md-6">
 
           <!-- Links -->
-          <h5>Links</h5>
+          <h5>Enlaces</h5>
 
           <ul class="list-unstyled">
-            <li>
-              <p>
-                <a href="faq">Preguntas frecuentes</a>
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href="contact">Contácto</a>
-              </p>
-            </li>
+            <li><a href="/faq">Preguntas frecuentes</a></li>
+            <li><a href="/contact">Contácto</a></li>
           </ul>
 
         </div>

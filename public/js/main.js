@@ -56,3 +56,4 @@ function showLogout() {
 function hideLogout() {
     document.getElementById("modal").style.display = 'none';
 }
+

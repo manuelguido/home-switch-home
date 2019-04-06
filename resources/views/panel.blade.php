@@ -1,19 +1,25 @@
-@extends('layouts.full')
+@extends('layouts.nav')
 
 @section('title','Contácto')
 
 @section('content')
 
+<style>
+    body {
+        background: #fff !important;
+    }
+</style>
+
 <!-- Se declara esto solo para cargar el js de panel -->
 <body onload="menuSwitch(0)">
 
-<div class="container card simple-div profile-div">
+<div class="container-fluid simple-div panel-div">
 
     <h1 id="profile-title"></h1>
     <hr>
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
             <div class="card">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item menuItem" onclick="menuSwitch(0)"><i class="far fa-address-card"></i> Información Personal</li>
@@ -22,7 +28,6 @@
                 <li class="list-group-item menuItem" onclick="menuSwitch(3)"><i class="fas fa-file-signature"></i> Historial de cobro</li>
                 <li class="list-group-item menuItem" onclick="menuSwitch(4)"><i class="far fa-credit-card"></i> Medios de pago</li>
                 <li class="list-group-item menuItem" onclick="menuSwitch(5)"><i class="fas fa-lock"></i> Cambiar Contraseña</li>
-                <li class="list-group-item menuItem" onclick="showLogout()"><i class="fas fa-power-off"></i> Cerrar Sesión</li>
             </ul>
             </div>
         </div>
@@ -30,7 +35,7 @@
         <!-- Inicio de containers cambiables -->
 
         <!-- Informacion Personal -->
-        <div class="container-fluid col-md-8 subItem">
+        <div class="container-fluid col-md-10 subItem">
             <div class="row">                
                 <div class="col-md-7">
                     <form>

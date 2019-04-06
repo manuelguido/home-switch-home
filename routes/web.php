@@ -27,6 +27,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/property', function () { //Acomodar enviando parametros del usuario
+    return view('property');
+});
+
 Route::get('/profile', function () { //Acomodar enviando parametros del usuario
     return view('profile');
 });
@@ -37,4 +41,8 @@ Route::get('/booking', function () { //Acomodar enviando parametros del usuario
 
 Route::get('/notifications', function () { //Acomodar enviando parametros del usuario
     return view('notifications');
+});
+
+Route::get('/admin', function () { //Acomodar enviando parametros del usuario
+    return view('panel');
 });
